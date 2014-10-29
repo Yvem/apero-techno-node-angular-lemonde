@@ -1,4 +1,1 @@
-apero-techno-node-angular-lemonde
-=================================
-
-Apéro techno @OMNILOG à propos de node, d'AngularJS et leur utilisation au journal Le Monde
+What are you doing here ? The interesting stuff is in the `gh-pages` branch of this git repo.
