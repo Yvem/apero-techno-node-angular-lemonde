@@ -1,0 +1,29 @@
+{
+  "name": "apero-techno-node-angular-lemonde",
+  "version": "0.0.1",
+  "description": "Apéro techno @OMNILOG à propos de node, d'AngularJS et leur utilisation au journal Le Monde",
+  "main": "index.html",
+  "scripts": {
+    "i": "npm prune; npm update; cd reveal.js; npm prune; npm update --production",
+    "s": "./node_modules/.bin/serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yvem/apero-techno-node-angular-lemonde.git"
+  },
+  "keywords": [
+    "technical",
+    "presentation",
+    "node.js",
+    "AngularJS"
+  ],
+  "author": "Yvem",
+  "license": "todo",
+  "bugs": {
+    "url": "https://github.com/Yvem/apero-techno-node-angular-lemonde/issues"
+  },
+  "homepage": "https://github.com/Yvem/apero-techno-node-angular-lemonde",
+  "dependencies": {
+    "serve": "^1.4.0"
+  }
+}
