@@ -56,11 +56,14 @@
 		<div class="slides">
 
 			<section>
-				<h3>Apéro techno - 21 novembre 2014</h3>
+				<a target="_blank" href="http://www.omnilog.fr/"><img src="images/logos/omnilog.png" /></a>
+				<h3><a href="http://yvem.github.io/apero-techno-node-angular-lemonde/">
+					Apéro techno - 21 novembre 2014
+				</a></h3>
 				<h1>node.js + AngularJS</h1>
 				<h3>au journal <strong>Le Monde</strong></h3>
 				<p>
-					<small>Par <a href="http://www.yves-emmanuel.jutard.com/">Yves-Emmanuel Jutard</a></small>
+					<small>Par <a target="_blank" href="http://www.yves-emmanuel.jutard.com/">Yves-Emmanuel Jutard</a></small>
 				</p>
 			</section>
 
@@ -79,11 +82,12 @@
 				</section>
 
 				<section>
-					<h3>(notes)</h3>
+					<h3>(Liens)</h3>
 					<ul>
-						<li><a href="http://www.yves-emmanuel.jutard.com/">http://www.yves-emmanuel.jutard.com/</a>
-						<li>Blog <a href="http://offirmo.net/">http://offirmo.net/</a>
-						<li>Github <a href="https://github.com/Offirmo?tab=repositories">https://github.com/Offirmo</a>
+						<li><a target="_blank" href="http://www.yves-emmanuel.jutard.com/">http://www.yves-emmanuel.jutard.com/</a>
+						<li>Blog <a target="_blank" href="http://offirmo.net/">http://offirmo.net/</a>
+						<li>Github <a target="_blank" href="https://github.com/Offirmo?tab=repositories">https://github.com/Offirmo</a>
+						<li>Wiki <a target="_blank" href="http://offirmo.net/wiki/">http://offirmo.net/wiki/</a>
 					</ul>
 				</section>
 
@@ -104,7 +108,7 @@
 
 			<section>
 				<h2>Bleeding edge ?</h2>
-				<img src="images/Gartner_Hype_Cycle.svg" height="300"/>
+				<a target="_blank" href="http://en.wikipedia.org/wiki/Hype_cycle"><img src="images/Gartner_Hype_Cycle.svg" height="300"/></a>
 				<ul>
 					<li>Qu'est-ce qui est si bien ?
 					<li>Qu'est-ce qui n'est pas si bien ?
@@ -115,17 +119,14 @@
 			<section>
 				<h2>Plan</h2>
 				<ol>
-					<li class="xfragment">Contexte</li>
-					<li class="xfragment">node.js</li>
-					<li class="xfragment">AngularJS</li>
-					<li class="xfragment">Pratiques au Monde</li>
-					<li class="xfragment">Opinions et conclusions</li>
+					<li><a href="#/contexte">Contexte</a>
+					<li><a href="#/nodejs">node.js</a>
+					<li><a href="#/angularjs">AngularJS</a>
+					<li><a href="#/pratiques">Bonnes pratiques au Monde</a>
+					<li><a href="#/conclusions">Opinions et conclusions</a>
 				</ol>
-				<p class="xfragment">
+				<p>
 					+ questions à volonté !
-				</p>
-				<p class="xfragment">
-					+ apéro !
 				</p>
 			</section>
 
@@ -134,9 +135,10 @@
 			<section>
 				<h2>Qui sont les pionniers en France ?</h2>
 				<img src="images/logos/Le_Monde_logo.svg" height="150" />
+				<h3>Nouvelle appli éditoriale "le 8"</h3>
 			</section>
 
-			<section>
+			<section id="contexte">
 				<h2>Contexte</h2>
 				<img src="images/logos/Le_Monde_logo.svg" height="100" />
 				<p>
@@ -149,20 +151,14 @@
 			</section>
 
 			<section>
-				<h2>DÉFIS</h2>
-				<img src="images/logos/Le_Monde_logo.svg" height="100" />
-				<ul>
-					<li>appli critique (BAT quotidien)
-					<li>charge
-					<li>utilisateurs difficiles
-				</ul>
-			</section>
-
-			<section>
 
 				<section>
 					<img src="images/logos/Le_Monde_logo.svg" />
-					<h2><a href="http://huit.lemonde.fr">Démo</a></h2>
+					<h2><a target="_blank" href="http://huit.lemonde.fr">Démo</a></h2>
+				</section>
+
+				<section>
+					<img src="images/le8.png" />
 				</section>
 
 				<section>
@@ -186,11 +182,21 @@
 
 			</section>
 
+			<section>
+				<h2>"Le 8" : défis</h2>
+				<img src="images/logos/Le_Monde_logo.svg" height="100" />
+				<ul>
+					<li>appli critique <small>le résultat est tiré à ~<a target="_blank" href="http://www.senat.fr/rap/r07-013/r07-0133.html">462 000 exemplaires quotidiens</a></small>
+					<li>charge
+					<li>utilisateurs difficiles
+				</ul>
+			</section>
+
 			<!-- Javascript -->
 
 			<section>
 
-				<section>
+				<section id="nodejs">
 					<h2>Javascript revolution</h2>
 					<img src="images/logos/js.svg" height="200"/>
 					<ul>
@@ -204,10 +210,10 @@
 					<h3>(notes)</h3>
 					<img src="images/logos/js.svg" height="200"/>
 					<ul>
-						<li><a href="http://www.crockford.com/javascript/javascript.html"><em>"The world's most misunderstood language"</em></a>
-						<li><a href="http://blog.codinghorror.com/javascript-the-lingua-franca-of-the-web/"><em>"the new lingua franca"</em></a>
-						<li><a href="http://radar.oreilly.com/2013/04/will-javascript-take-over-the-programming-world.html"><em>"Will JavaScript take over the programming world?"</em></a>
-						<li><a href="http://readwrite.com/2013/08/09/why-javascript-will-become-the-dominant-programming-language-of-the-enterprise"><em>"Why JavaScript Will Become The Dominant Programming Language Of The Enterprise"</em></a>
+						<li><a target="_blank" href="http://www.crockford.com/javascript/javascript.html"><em>"The world's most misunderstood language"</em></a>
+						<li><a target="_blank" href="http://blog.codinghorror.com/javascript-the-lingua-franca-of-the-web/"><em>"the new lingua franca"</em></a>
+						<li><a target="_blank" href="http://radar.oreilly.com/2013/04/will-javascript-take-over-the-programming-world.html"><em>"Will JavaScript take over the programming world?"</em></a>
+						<li><a target="_blank" href="http://readwrite.com/2013/08/09/why-javascript-will-become-the-dominant-programming-language-of-the-enterprise"><em>"Why JavaScript Will Become The Dominant Programming Language Of The Enterprise"</em></a>
 					</ul>
 				</section>
 
@@ -272,15 +278,12 @@
 				</section>
 
 				<section>
-					<h3>(notes)</h3>
+					<h3>(liens)</h3>
 					<h2><img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/></h2>
-					<p>
-						Liens pour débuter
-					</p>
 					<ul>
-						<li><a href="http://nodejs.org/">http://nodejs.org/</a>
-						<li><a href="http://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js">Des applications ultra-rapides avec Node.js</a>
-						<li><a href="http://www.nodebeginner.org/">http://nodejs.org/</a>
+						<li><a target="_blank" href="http://nodejs.org/">http://nodejs.org/</a>
+						<li><a target="_blank" href="http://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js">Des applications ultra-rapides avec Node.js</a>
+						<li><a target="_blank" href="http://www.nodebeginner.org/">http://www.nodebeginner.org/</a>
 					</ul>
 				</section>
 
@@ -352,19 +355,16 @@
 				</section>
 
 				<section>
-					<h3>(notes)</h3>
+					<h3>(liens)</h3>
 					<h2><img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/></h2>
-					<p>
-						Liens
-					</p>
 					<ul>
-						<li><a href="https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b">Farewell Node.js</a>
+						<li><a target="_blank" href="https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b">Farewell Node.js</a>
 					</ul>
 				</section>
 
 			</section>
 
-			<section>
+			<section id="angularjs">
 				<h2>Pendant ce temps, le front-end...</h2>
 				<p>
 					<img src="images/logos/scotch-icons/html5-color.svg" height="100"/>
@@ -374,16 +374,31 @@
 				<ul>
 					<li>de plus en plus complexe
 					<li>passe lui aussi au dynamique, connecté
+					<li><strong><em>"un nouveau framework par jour"</em></strong>
 				</ul>
-				<h3><em>"un nouveau framework par jour"</em></h3>
 			</section>
 
 			<section>
-				<h2>Introducing...</h2>
-				<img src="images/logos/AngularJS_logo.svg" height="250"/>
-				<p>
-					pour appli cliente propre et organisée
-				</p>
+
+				<section>
+					<h2>Introducing...</h2>
+					<img src="images/logos/AngularJS_logo.svg" height="250"/>
+					<p>
+						pour appli cliente propre et organisée
+					</p>
+				</section>
+
+				<section>
+					<h3>(liens)</h3>
+					<img src="images/logos/AngularJS_logo_simp.svg" height="80"/>
+					<ul>
+						<li>Site officiel <a target="_blank" href="http://angularjs.org/">http://angularjs.org/</a>
+						<li><a target="_blank" href="http://offirmo.net/wiki/index.php?title=AngularJS">mes notes</a>
+						<li><a target="_blank" href="http://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/">Ultimate guide to learning AngularJS in one day </a>
+						<li><a target="_blank" href="http://www.thinkful.com/learn/angularjs-tutorial-build-a-gmail-clone/">learn angular by building a gmail clone</a>
+					</ul>
+				</section>
+
 			</section>
 
 			<section>
@@ -426,9 +441,17 @@
 			</section>
 
 			<section>
-				<h2>Testable ?</h2>
-				<img src="images/angularjs_functional_testing_protractor.jpg"/>
-				<h2>DÉMO</h2>
+
+				<section>
+					<h2>Testable ?</h2>
+					<img src="images/angularjs_functional_testing_protractor.jpg"/>
+					<h2>DÉMO</h2>
+				</section>
+
+				<section>
+					<img src="images/pratiques/e2e.png"/>
+				</section>
+
 			</section>
 
 			<section>
@@ -462,12 +485,12 @@
 				</ul>
 			</section>
 
-			<section>
+			<section id="pratiques">
 				<h2>node + Angular = magie ?</h2>
 				<p>
-					La techno aide, mais la fiabilité est dans les bonnes pratiques.
+					La techno aide, mais la solidité est dans les bonnes pratiques.
 				</p>
-				<img src="images/logos/AngularJS_logo_simp.svg" height="80"/>
+				<img src="images/lack_of_testing.jpg"/>
 			</section>
 
 			<section>
@@ -488,32 +511,29 @@
 				<h2>Gestion de projet</h2>
 				<ul>
 					<li>dès la conception
-						<ul>
-							<li>API first
-							<li>personnas
-						</ul>
+					<li>personnas, API first, expert UX...
 				</ul>
-				<img src="images/instagram/IMG_20141118_183049.jpg"/>
+				<img src="images/instagram/IMG_20141119_124521.jpg"/>
 			</section>
 
 			<section>
 				<h2>Code linting</h2>
-				<img src="images/instagram/IMG_20141118_182652.jpg"/>
+				<img src="images/pratiques/linting.png"/>
 			</section>
 
 			<section>
 				<h2>Code review</h2>
-				<img src="images/instagram/IMG_20141118_182652.jpg"/>
+				<img src="images/pratiques/codereview.png"/>
 			</section>
 
 			<section>
 				<h2>Tests unitaires</h2>
-				<img src="images/instagram/IMG_20141118_182652.jpg"/>
+				<img src="images/pratiques/tests.png"/>
 			</section>
 
 			<section>
 				<h2>Tests e2e</h2>
-				<img src="images/instagram/IMG_20141118_182652.jpg"/>
+				<img src="images/pratiques/e2e.png"/>
 			</section>
 
 			<section>
@@ -523,7 +543,7 @@
 
 			<section>
 				<h2>Déploiement roulant</h2>
-				<img src="images/instagram/IMG_20141118_182652.jpg"/>
+				<img src="images/pratiques/healthcheck.png"/>
 			</section>
 
 			<section>
@@ -531,15 +551,16 @@
 				<img src="images/instagram/IMG_20141118_182936.jpg"/>
 			</section>
 
-			<section>
+			<section id="conclusions">
 				<h2>Conclusions</h2>
 				<ul>
-					<li>technos récentes : rencontré bugs, veille nécessaire, devs d'élite
+					<li>technos récentes : rencontré bugs, veille nécessaire, besoin devs motivés
 					<li>front-end encore en recherche, évolutions majeures à venir
 					<li>promesse de code reuse moyennement tenues
 					<li>micro-libs magiques mais versions à maintenir
 					<li>micro-libs = créativité mais bonnes pratiques peinent à émerger
 					<li>microservices : la prod ne suit pas
+					<li>microservices : question organisationelles
 					<li>agile, dette = compétence et discipline nécessaire
 				</ul>
 			</section>
@@ -548,7 +569,7 @@
 
 				<section>
 					<h1>THE END</h1>
-					<h3>Questions + apéro !!</h3>
+					<h3>Questions + merci à tous !!</h3>
 				</section>
 
 				<section>
@@ -558,7 +579,7 @@
 						…
 					</p>
 					<ul>
-						<li><a href="https://medium.com/">…</a>
+						<li><a target="_blank" href="https://medium.com/">…</a>
 						<li>…
 					</ul>
 				</section>
