@@ -19,7 +19,7 @@
 
 	<!-- For syntax highlighting -->
 	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
-	
+
 	<!-- tweek reveal styles -->
 	<style>
 		.reveal section img {
@@ -32,7 +32,7 @@
 		}
 	</style>
 
-	
+
 	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 	<script>
 		if( window.location.search.match( /print-pdf/gi ) ) {
@@ -55,133 +55,532 @@
 
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-		
+
 			<section>
 				<h3>Apéro techno - 21 novembre 2014</h3>
 				<h1>node.js + AngularJS</h1>
-				<h3>au journal Le Monde</h3>
+				<h3>au journal <strong>Le Monde</strong></h3>
 				<p>
 					<small>Par <a href="http://www.yves-emmanuel.jutard.com/">Yves-Emmanuel Jutard</a></small>
 				</p>
 			</section>
 
+			<!-- Me -->
+
+			<section>
+
+				<section>
+					<h3>À propos</h3>
+					<img src="images/profil.jpg" height="300" />
+					<ul>
+						<li>Ex. développeur <em>"corporate"</em> C / C++
+						<li>Migration volontaire vers le <em>"bleeding edge"</em>
+						<li>Arrivée chez Omnilog en février 2014</em>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Yves-Emmanuel Jutard</h3>
+					<ul>
+						<li><a href="http://www.yves-emmanuel.jutard.com/">http://www.yves-emmanuel.jutard.com/</a>
+						<li>Blog <a href="http://offirmo.net/">http://offirmo.net/</a>
+						<li>Github <a href="https://github.com/Offirmo?tab=repositories">https://github.com/Offirmo</a>
+					</ul>
+				</section>
+
+			</section>
+
+            <!-- Story -->
+
+            <section>
+                <h2>Bleeding edge ?</h2>
+                <img src="images/logos/scotch-icons/nodejs-color.svg" height="80"/>
+                <br />
+                <img src="images/logos/AngularJS_logo.svg" height="100"/>
+                <ul>
+                    <li>Technos récentes : 1ères versions en 2009
+                    <li>Font encore le buzz (même si ça se calme)
+                </ul>
+            </section>
+
+            <section>
+                <h2>Bleeding edge ?</h2>
+                <img src="images/Gartner_Hype_Cycle.svg" height="300"/>
+                <ul>
+                    <li>Qu'est-ce qui est si bien ?
+                    <li>Qu'est-ce qui n'est pas si bien ?
+                    <li>Est-ce pour moi ?
+                </ul>
+            </section>
+
 			<section>
 				<h2>Plan</h2>
 				<ol>
-					<li class="fragment">Contexte</li>
-					<li class="fragment">Flot de développement du Monde</li>
-					<li class="fragment">node.js</li>
-					<li class="fragment">AngularJS</li>
+					<li class="xfragment">Contexte</li>
+					<li class="xfragment">node.js</li>
+					<li class="xfragment">AngularJS</li>
+                    <li class="xfragment">Pratiques au Monde</li>
+                    <li class="xfragment">Opinions et conclusions</li>
 				</ol>
-				<p class="fragment">
+				<p class="xfragment">
 					+ questions à volonté !
 				</p>
-				<p class="fragment">
+				<p class="xfragment">
 					+ apéro !
 				</p>
 			</section>
 
 			<!-- Contexte -->
-			<section>
-			
-				<section>
-					<h2>Contexte</h2>
-					<p>
-						Yves-Emmanuel
-					</p>
-					<ul>
-						<li>Ex. développeur <em>"corporate"</em> en C - C embarqué - C++
-						<li>Migration volontaire vers le "bleeding edge" !
-					</ul>
-					<img src="images/webdev.png" />
-				</section>
-			
-				<section>
-					<h2>Contexte</h2>
-					<p>
-						<img src="images/logos/Le_Monde_logo.svg" />
-					</p>
-					<h4>
-						Nouveau système éditorial :
-					</h4>
-					<p>
-						Fusion de l'édition <strong>print</strong> <small>journal papier</small> <br /> et <strong>numérique</strong> <small>site web, mobiles, tablettes...</small>
-					</p>
-				</section>
-			
-				<section>
-					<p>
-						<img src="images/logos/Le_Monde_logo.svg" />
-					</p>
-					<h2><a href="http://huit.lemonde.fr">Démo</a></h2>
-				</section>
-			
-				<section>
-					<p>
-						<img src="images/logos/Le_Monde_logo.svg" />
-					</p>
-					<h2>Forte culture technique</h2>
-					<ul>
-						<li class="fragment">Indépendance technique envers la hiérarchie
-						<li class="fragment">Veille et adoption rapide des nouvelles technos
-						<li class="fragment">Meetups et conférences recommandés
-						<li class="fragment">Les devs font ce qu'ils veulent de leurs machines ;-)
-					</ul>
-				</section>
-				
-			</section>
 
-			<section>
+            <section>
+                <h2>Qui sont les pionniers en France ?</h2>
+                <img src="images/logos/Le_Monde_logo.svg" height="150" />
+            </section>
 
-				<section>
-					<img src="images/logos/Le_Monde_logo.svg" height="60" />
-					<h2>Technos utilisées</h2>
-					<p>
-						<img src="images/logos/scotch-icons/html5-color.svg" height="100"/>
-						<img src="images/logos/scotch-icons/css3-color.svg" height="100"/>
-						<img src="images/logos/js.svg" height="100"/>
-					</p>
-					<p>
-						<img src="images/logos/scotch-icons/nodejs-color.svg" height="80"/>
-						<img src="images/logos/scotch-icons/grunt-color.svg" height="100"/>
-						<img src="images/logos/scotch-icons/angular-color.svg" height="100"/>
-						<img src="images/logos/scotch-icons/bootstrap-color.svg" height="100"/>
-						<img src="images/logos/scotch-icons/sass-color.svg" height="100"/>
-					</p>
-				</section>
+            <section>
+                <h2>Contexte</h2>
+                <img src="images/logos/Le_Monde_logo.svg" height="100" />
+                <p>
+                    Nouveau système éditorial. Fusion des éditions :
+                </p>
+                <ul>
+                    <li><strong>print</strong> = journal papier
+                    <li><strong>numérique</strong> = site web, mobiles, tablettes...
+                </ul>
+            </section>
 
-				<section>
-					<h2>Javascript revolution</h2>
-					<p>
-						<img src="images/logos/js.svg" height="200"/>
-					</p>
-					<ul>
-						<li class="fragment"><a href="http://www.crockford.com/javascript/javascript.html"><em>"The world's most misunderstood language"</em></a>
-						<li class="fragment"><a
-							href="http://blog.codinghorror.com/javascript-the-lingua-franca-of-the-web/"><em>"the new lingua franca"</em></a> <em>"JavaScript is EVERYWHERE"</em>
-						<li class="fragment">énorme pool de développeurs
-					</ul>
-				</section>
+            <section>
+                <h2>DÉFIS</h2>
+                <img src="images/logos/Le_Monde_logo.svg" height="100" />
+                <ul>
+                    <li>appli critique (BAT quotidien)
+                    <li>charge
+                    <li>utilisateurs difficiles
+                </ul>
+            </section>
 
-				<section>
-					<h2>Javascript revolution</h2>
-					<p>
-						<img src="images/logos/js.svg" height="200"/>
-					</p>
-					<ul>
-						<li class="fragment"><a href="http://www.crockford.com/javascript/javascript.html"><em>"The world's most misunderstood language"</em></a>
-						<li class="fragment"><a href="http://blog.codinghorror.com/javascript-the-lingua-franca-of-the-web/"><em>"the new lingua franca"</em></a>
-						<li class="fragment"><em>"JavaScript is EVERYWHERE"</em>
-						<li class="fragment">énorme pool de développeurs
-					</ul>
-				</section>
+            <section>
+
+                <section>
+                    <p>
+                        <img src="images/logos/Le_Monde_logo.svg" />
+                    </p>
+                    <h2><a href="http://huit.lemonde.fr">Démo</a></h2>
+                </section>
+
+                <section>
+                    <h2>Technos utilisées</h2>
+                    <p>
+                        <img src="images/logos/scotch-icons/html5-color.svg" height="100"/>
+                        <img src="images/logos/scotch-icons/css3-color.svg" height="100"/>
+                        <img src="images/logos/js.svg" height="100"/>
+                    </p>
+                    <p>
+                        <img src="images/logos/scotch-icons/nodejs-color.svg" height="80"/>
+                        <img src="images/logos/scotch-icons/angular-color.svg" height="100"/>
+                        <img src="images/logos/scotch-icons/bootstrap-color.svg" height="100"/>
+                    </p>
+                    <p>
+                        <img src="images/logos/scotch-icons/sass-color.svg" height="100"/>
+                        <img src="images/logos/scotch-icons/grunt-color.svg" height="100"/>
+                    </p>
+                </section>
 
 			</section>
 
-			<section>
-				<h1>THE END</h1>
-				<h3>Questions + apéro !!</h3>
+            <!-- Javascript -->
+
+            <section>
+
+                <section>
+                    <h2>Javascript revolution</h2>
+                    <p>
+                        <img src="images/logos/js.svg" height="200"/>
+                    </p>
+                    <ul>
+                        <li>le langage le plus incompris du monde
+                        <li>accidentellement génial <em>(comme à peu près tout le web ;)</em>
+                        <li>déjà partout, énorme pool de développeurs
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Javascript revolution</h2>
+                    <p>
+                        <img src="images/logos/js.svg" height="200"/>
+                    </p>
+                    <ul>
+                        <li><a href="http://www.crockford.com/javascript/javascript.html"><em>"The world's most misunderstood language"</em></a>
+                        <li><a href="http://blog.codinghorror.com/javascript-the-lingua-franca-of-the-web/"><em>"the new lingua franca"</em></a>
+                        <li><a href="http://radar.oreilly.com/2013/04/will-javascript-take-over-the-programming-world.html"><em>"Will JavaScript take over the programming world?"</em></a>
+                        <li><a href="http://readwrite.com/2013/08/09/why-javascript-will-become-the-dominant-programming-language-of-the-enterprise"><em>"Why JavaScript Will Become The Dominant Programming Language Of The Enterprise"</em></a>
+                    </ul>
+                </section>
+
 			</section>
+
+            <section>
+
+                <section>
+                    <h2>Javascript revolution</h2>
+                    <p>
+                        <img src="images/logos/js.svg" height="100"/>
+                    </p>
+                    <ul>
+                        <li>un langage de script comme un autre <small>python, ruby</small>
+                        <li>langage interprété = <strong>productivité++</strong> <small>typage fort pas si utile</small>
+                        <li>héritage prototypal = <strong>productivité++</strong> <small>un vent de fraicheur sur l'objet</small>
+                        <li><strong>J</strong><strong>S</strong>ON = <strong>productivité++</strong> <small>au revoir XML lourd</small>
+                        <li>closures intégrées = <strong>magie insoupçonnée</strong> <small>wink java</small>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Javascript revolution</h2>
+                    <p>
+                        <img src="images/logos/js.svg" height="100"/>
+                    </p>
+                    <ul>
+                        <li>même âge que ruby ! (1995)
+                        <li>ce sont les tests qui font la qualité du code
+                        <li>le tout objet est lourd et inefficace
+                        <li>ruby et python ont le DP réacteur, mais en lib, et la std API a des I/O bloquantes
+                        <li>pendant ce temps, java discute encore de comment implémenter les closures
+                    </ul>
+                </section>
+
+            </section>
+
+            <section>
+                <h2>Le nouveau venu</h2>
+                <p>
+                    <img src="images/logos/v8_logo.svg" height="200"/>
+                </p>
+                <ul>
+                    <li>interpréteur javascript tout neuf by google (2008)
+                    <li>open source, performant
+                </ul>
+            </section>
+
+            <section>
+
+                <section>
+                    <p>
+                        <img src="images/logos/v8_logo.svg" height="100"/>
+                        <img src="images/OCR-A_char_Plus_Sign.svg" height="100"/>
+                    </p>
+                    <p>
+                       …une lib <em>"from scratch"</em> au meilleur du moment :
+                    </p>
+                    <ul>
+                        <li>design pattern réacteur <strong>intégré</strong> <small>merci les closures</small>
+                        <li>I/O non bloquantes <small>merci les closures</small>
+                        <li>modèle évènementiel
+                        <li>micro-framework <small>souplesse, liberté</small>
+                        <li>gestionnaire de paquet (npm, 2011)
+                    </ul>
+                    <h2>= <img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/></h2>
+                </section>
+
+                <section>
+                    <h2><img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/></h2>
+                    <p>
+                        Liens pour débuter
+                    </p>
+                    <ul>
+                        <li><a href="http://nodejs.org/">http://nodejs.org/</a>
+                        <li><a href="http://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js">Des applications ultra-rapides avec Node.js</a>
+                        <li><a href="http://www.nodebeginner.org/">http://nodejs.org/</a>
+                    </ul>
+                </section>
+
+            </section>
+
+            <section>
+                <p>
+                    micro-framework :
+                </p>
+                <img src="images/node-server.png" height="350" />
+                <p>
+                    ligne de commande :
+                </p>
+                <img src="images/node-invocation.png" height="150" />
+            </section>
+
+            <section>
+
+                <section>
+                    <h2><img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/></h2>
+                    <ul>
+                        <li>cible le web dynamique, connecté
+                        <li><strong>performance++</strong> pour les serveurs
+                        <li>mono-thread = <strong>productivité++</strong>
+                        <li>APIs REST, micro-services
+                        <li>ingés et missions full stack
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>recos grands noms du web</h2>
+                    <img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/>
+                    <p>
+                        TODO…
+                    </p>
+                    <ul>
+                        <li>…
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>microservices</h2>
+                    <img src="images/microservices-sketch.png" height="400"/>
+                    <ul>
+                        <li>http://fr.slideshare.net/xgorse/klubup-forumphp-join
+                        <li>http://martinfowler.com/articles/microservices.html
+                    </ul>
+                </section>
+
+            </section>
+
+            <section>
+                <h2><img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/></h2>
+                <ul>
+                    <li>cible le web dynamique, connecté
+                    <li><strong>performance++</strong> pour les serveurs
+                    <li>mono-thread = <strong>productivité++</strong>
+                    <li>APIs REST, micro-services
+                    <li>projets, code et développeurs full stack (en théorie)
+                </ul>
+            </section>
+
+            <section>
+
+                <section>
+                    <h2><img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/></h2>
+                    <p>
+                        contre-points
+                    </p>
+                    <ul>
+                        <li>pas pour le calcul intensif ou tâches longues
+                        <li>pas pour de simple CRUD ops
+                        <li>callback hell (promises ?)
+                        <li>API parfois brouillonne (évènement ? exception ?)
+                        <li>API non terminée, version stable encore à venir, ex. mode cluster
+                        <li>pb de gouvernance en cours
+                    </ul>
+                </section>
+
+                <section>
+                    <h2><img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/></h2>
+                    <p>
+                        Liens
+                    </p>
+                    <ul>
+                        <li><a href="https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b">Farewell Node.js</a>
+                    </ul>
+                </section>
+
+            </section>
+
+            <section>
+                <h2>Pendant ce temps, le front-end...</h2>
+                <p>
+                    <img src="images/logos/scotch-icons/html5-color.svg" height="100"/>
+                    <img src="images/logos/scotch-icons/css3-color.svg" height="100"/>
+                    <img src="images/logos/js.svg" height="100"/>
+                </p>
+                <ul>
+                    <li>de plus en plus complexe
+                    <li>passe lui aussi au dynamique, connecté
+                </ul>
+                <h3><em>"un nouveau framework par jour"</em></h3>
+            </section>
+
+            <section>
+                <h2>Introducing...</h2>
+                <img src="images/logos/AngularJS_logo.svg" height="250"/>
+                <p>
+                    pour appli cliente propre et organisée
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    inclusions dans le HTML
+                </p>
+                <img src="images/angular-code.png" height="200" />
+                <p>
+                    Résultat :
+                </p>
+                <img src="images/angular-result.png" height="200" />
+            </section>
+
+            <section>
+                <img src="images/ng-full-featured.png" />
+            </section>
+
+            <section>
+                <img src="images/logos/AngularJS_logo_simp.svg" height="80"/>
+                <ul>
+                    <li>framework <strong>déclaratif</strong> (comme le HTML et c'est bien)
+                    <li>permet de modulariser son appli
+                    <li>solide, made by google, grosse communauté
+                    <li>prévu <strong>testable</strong> dès la conception (et c'est bien !)
+                    <li>pas parfait, mais îlot de stabilité dans le monde fou du front-end !
+                </ul>
+            </section>
+
+            <section>
+                <h2>Testable ?</h2>
+                <img src="images/angularjs_functional_testing_protractor.jpg"/>
+                <ul>
+                    <li>testable en test unitaire
+                        <ul>
+                            <li>rapide
+                            <li>accès au DOM (phantomJS)
+                        </ul>
+                    <li>testable en e2e (selenium + protractor)
+                </ul>
+            </section>
+
+            <section>
+                <h2>Testable ?</h2>
+                <img src="images/angularjs_functional_testing_protractor.jpg"/>
+                <h2>DÉMO</h2>
+            </section>
+
+            <section>
+
+                <section>
+                    <img src="images/logos/AngularJS_logo_simp.svg" height="80"/>
+                    <br />
+                    <img src="images/curvaAngular1.jpg"/>
+                    <ul>
+                        <li>gros framework
+                        <li>beaucoup de concepts à intégrer
+                    </ul>
+                </section>
+
+                <section>
+                    <img src="images/feelings_about_angularjs_over_time.png"/>
+                </section>
+
+            </section>
+
+            <section>
+                <img src="images/logos/AngularJS_logo_simp.svg" height="80"/>
+                <ul>
+                    <li>Attention au SEO
+                    <li>Attention aux perfs
+                    <li>DI complexe, bootstrap
+                    <li>gros concurrent qui monte : react (facebook)
+                    <li>environnement front encore instable (ES6, polymer, web components…)
+                    <li>AngularJS 2.0 proche
+                </ul>
+            </section>
+
+            <section>
+                <h2>node + Angular = magie ?</h2>
+                <p>
+                    La techno aide, mais la fiabilité est dans les bonnes pratiques.
+                </p>
+                <img src="images/logos/AngularJS_logo_simp.svg" height="80"/>
+            </section>
+
+            <section>
+                <h2>Bonnes pratiques</h2>
+                <ul>
+                    <li>Gestion de projet
+                    <li>Code linting (jshint)
+                    <li>Code review (Github entreprise)
+                    <li>Tests unitaires
+                    <li>Tests e2e
+                    <li>Intégration continue (Jenkins)
+                    <li>Déploiement roulant
+                    <li>Supervision
+                </ul>
+            </section>
+
+            <section>
+                <h2>Gestion de projet</h2>
+                <ul>
+                    <li>dès la conception
+                        <ul>
+                            <li>API first
+                            <li>personnas
+                        </ul>
+                </ul>
+                <img src="images/instagram/IMG_20141118_183049.jpg"/>
+            </section>
+
+            <section>
+                <h2>Code linting</h2>
+                <img src="images/instagram/IMG_20141118_182652.jpg"/>
+            </section>
+
+            <section>
+                <h2>Code review</h2>
+                <img src="images/instagram/IMG_20141118_182652.jpg"/>
+            </section>
+
+            <section>
+                <h2>Tests unitaires</h2>
+                <img src="images/instagram/IMG_20141118_182652.jpg"/>
+            </section>
+
+            <section>
+                <h2>Tests e2e</h2>
+                <img src="images/instagram/IMG_20141118_182652.jpg"/>
+            </section>
+
+            <section>
+                <h2>Intégration continue</h2>
+                <img src="images/instagram/IMG_20141118_182652.jpg"/>
+            </section>
+
+            <section>
+                <h2>Déploiement roulant</h2>
+                <img src="images/instagram/IMG_20141118_182652.jpg"/>
+            </section>
+
+            <section>
+                <h2>Supervision</h2>
+                <img src="images/instagram/IMG_20141118_182936.jpg"/>
+            </section>
+
+            <section>
+                <h2>Conclusions</h2>
+                <ul>
+                    <li>technos récentes : rencontré bugs, veille nécessaire, devs d'élite
+                    <li>front-end encore en recherche, évolutions majeures à venir
+                    <li>promesse de code reuse partiellement tenues
+                    <li>micro-libs magiques mais versions à maintenir
+                    <li>micro-libs = foisonnant mais bonnes pratiques peinent à émerger
+                    <li>microservices : la prod ne suit pas
+                    <li>agile, dette = compétence et discipline nécessaire
+                </ul>
+            </section>
+
+            <section>
+
+                <section>
+                    <h1>THE END</h1>
+                    <h3>Questions + apéro !!</h3>
+                </section>
+
+                <section>
+                    <h2>Titre</h2>
+                    <img src="images/logos/scotch-icons/nodejs-color.svg" height="100"/>
+                    <p>
+                        …
+                    </p>
+                    <ul>
+                        <li><a href="https://medium.com/">…</a>
+                        <li>…
+                    </ul>
+                </section>
+                
+            </section>
 
 		</div>
 
